@@ -1,0 +1,18 @@
+.section {
+  display: inline-flex;
+  flex-direction: column;
+
+  padding: 20px;
+
+  border: 2px solid deepskyblue;
+}
+
+.title {
+  margin-top: 0;
+
+  text-align: center;
+}
+
+.titleContact {
+  text-align: center;
+}
