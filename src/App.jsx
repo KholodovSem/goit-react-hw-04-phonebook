@@ -1,12 +1,12 @@
 import { useState } from 'react';
-import AddContactForm from './Form';
-import ContactList from './ContactList';
-import Filter from './Filter';
-import style from './ContactBook.module.css';
-import useLocalStorage from '../../hooks/useLocalStorage';
-import arrayContacts from '../../jsonData/arrayContacts.json';
+import AddContactForm from './components/ContactForm/Form';
+import ContactList from './components/ContactList/ContactList';
+import Filter from './components/Filter/Filter';
+import style from './App.module.css';
+import useLocalStorage from './hooks/useLocalStorage';
+import arrayContacts from './jsonData/arrayContacts.json';
 
-function ContactsBook() {
+function App() {
   const [contacts, setContacts] = useLocalStorage('savedContacts', arrayContacts);
 
   const [filter, setFilter] = useState('');
@@ -53,5 +53,5 @@ function ContactsBook() {
   );
 }
 
-export default ContactsBook;
+export default App;
 

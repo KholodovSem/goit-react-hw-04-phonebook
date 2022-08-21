@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import style from './ContactList.module.css';
 
 function ContactList({ onFilterContacts, onHandleDelete }) {
@@ -19,6 +20,12 @@ function ContactList({ onFilterContacts, onHandleDelete }) {
       ))}
     </ul>
   );
-};
+}
+
+ContactList.propTypes = {
+  onFilterContacts: PropTypes.func.isRequired,
+  onHandleDelete: PropTypes.func.isRequired
+}
 
 export default ContactList;
+

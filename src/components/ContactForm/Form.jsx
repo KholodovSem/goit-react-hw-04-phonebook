@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { nanoid } from 'nanoid';
+import PropTypes from 'prop-types';
 import style from './Form.module.css';
 
 function AddContactForm({ onHandlePush }) {
@@ -77,4 +78,9 @@ function AddContactForm({ onHandlePush }) {
   );
 }
 
+AddContactForm.propTypes = {
+  onHandlePush: PropTypes.func.isRequired
+}
+
 export default AddContactForm;
+
